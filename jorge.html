@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #152618;
+            color: white;
+        }
+
+        .chat-container {
+            display: flex;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        .people-list {
+            width: 50%;
+            background-color: #040D01;
+            border-right: 1px solid #283940;
+            padding: 20px;
+        }
+
+        .chat-box {
+            flex: 1;
+            width: 50%;
+            padding: 20px;
+        }
+
+        .person {
+            cursor: pointer;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .person:hover {
+            background-color: #283940;
+        }
+
+        .conversation {
+            display: none;
+        }
+
+        .conversation.active {
+            display: block;
+        }
+
+        .outren {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .user {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .person4 {
+            text-align: justify;
+        }
+
+        @media (max-width: 768px) {
+            .chat-container {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .chat-box {
+                width: 100%;
+            }
+
+            .people-list {
+                width: 100%;
+                border-right: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="chat-container">
+        <div class="people-list">
+            <div class="person" onclick="showConversation('person1')">Viser</div>
+            <div class="person" onclick="showConversation('person2')">Ana (secretária)</div>
+            <div class="person" onclick="showConversation('person3')">Miguel(MT)</div>
+            <div class="person" onclick="showConversation('person4')">Sr. Polox</div>
+        </div>
+        <div class="chat-box">
+            <div class="conversation person1 active">
+                <p class="outren"><b>Viser Um:</b><br> Olá Jorge, como você está?</p>
+                <p class="user"><b>Jorge Carmalho:</b><br> Olá Viser! Tudo bem por aqui. O que há de novo?</p>
+                <p class="outren"><b>Viser Um:</b><br> Precisamos falar sobre algo importante. Não posso discutir
+                    detalhes
+                    aqui, mas é relacionado ao nosso projeto no grupo Celestes.</p>
+                <p class="user"><b>Jorge Carmalho:</b><br> Claro, Viser. Estou intrigado. O que está acontecendo?</p>
+                <p class="outren"><b>Viser Um:</b><br>O Senhor Polox delineou um plano para criar um exército de robôs
+                    usando uma tecnologia chamada Horizon. Ele acredita que isso nos dará uma vantagem significativa.
+                    Preciso discutir mais detalhes pessoalmente.</p>
+                <p class="user"><b>Jorge Carmalho:</b><br>Um exército de robôs? Isso é sério. Estou curioso para saber
+                    como a Infinity Technology pode se envolver nisso.</p>
+                <p class="outren"><b>Viser Um:</b><br>O Senhor Polox confia na expertise da Infinity Technology para
+                    implementar a tecnologia Horizon de forma eficaz. Ele vê a sua empresa como peça chave para o
+                    sucesso desse plano.</p>
+                <p class="user"><b>Jorge Carmalho:</b><br>Fascinante, Viser. Podemos marcar uma reunião particular para
+                    discutir os detalhes? Talvez na sede da Infinity Technology?</p>
+                <p class="outren"><b>Viser Um:</b><br>Com certeza, Jorge. Acredito que uma reunião presencial será mais
+                    apropriada para discutir os detalhes sensíveis desse projeto. Podemos agendar para amanhã à tarde?
+                </p>
+                <p class="user"><b>Jorge Carmalho:</b><br>Perfeito, Viser. Estarei disponível amanhã. Vamos nos
+                    encontrar na minha sala de conferências. E, claro, manteremos tudo isso em segredo.</p>
+                <p class="outren"><b>Viser Um:</b><br>Ótimo, Jorge. Conto com a sua discrição. Amanhã à tarde, então.
+                    Até lá.</p>
+            </div>
+            <div class="conversation person2">
+                <p class="user"><strong>Jorge Carmalho:</strong> Olá Ana, poderia reservar um tempo para uma reunião
+                    privada na minha
+                    sala de conferências amanhã à tarde?</p>
+                <p class="outren"><strong>Ana:</strong> Claro, Jorge. Para que horas e sobre o que será a reunião?</p>
+                <p class="user"><strong>Jorge Carmalho:</strong> Marque para as 15h. Vou discutir detalhes de um projeto
+                    secreto do
+                    grupo Celestes. É crucial manter isso em sigilo absoluto. Prepare todos os documentos relacionados
+                    ao projeto Horizon.</p>
+                <p class="outren"><strong>Ana:</strong> Entendi, Jorge. Farei as devidas preparações. Alguma informação
+                    específica que
+                    devo incluir?</p>
+                <p class="user"><strong>Jorge Carmalho:</strong> Sim, traga os relatórios sobre as peças necessárias
+                    para a
+                    construção dos robôs. Precisamos garantir que a Infinity Technology tenha acesso a todos os recursos
+                    necessários.</p>
+                <p class="outren"><strong>Ana:</strong> Compreendido. Alguma outra instrução?</p>
+                <p class="user"><strong>Jorge Carmalho:</strong> Certifique-se de que a equipe de pesquisa e
+                    desenvolvimento esteja
+                    ciente da natureza confidencial dessa reunião. A partir de agora, qualquer comunicação sobre o
+                    projeto Horizon será restrita a um grupo seleto de pessoas.</p>
+                <p class="outren"><strong>Ana:</strong> Entendido, Jorge. Vou garantir que tudo esteja organizado para
+                    amanhã à tarde.
+                    Mais alguma coisa?</p>
+                <p class="user"><strong>Jorge Carmalho:</strong> Não, por enquanto. Apenas certifique-se de que a sala
+                    de
+                    conferências esteja preparada e que todos os documentos estejam disponíveis. Este projeto pode ser
+                    um divisor de águas para a Infinity Technology.</p>
+                <p class="outren"><strong>Ana:</strong> Com certeza, Jorge. Estaremos prontos. Alguma outra coisa?</p>
+                <p class="user"><strong>Jorge Carmalho:</strong> Não, Ana. Obrigado. Estou confiante de que podemos
+                    fazer a diferença
+                    nesse projeto. Até amanhã.</p>
+                <p class="outren"><strong>Ana:</strong> Até amanhã, Jorge. Estarei à disposição.</p>
+
+            </div>
+            <div class="conversation person3">
+                <p class="outren"><strong>Miguel:</strong> Jorge, quanto tempo! Como vão as coisas na Infinity
+                    Technology?</p>
+                <p class="user"><strong>Jorge Carmalho:</strong> Olá, meu amigo! As coisas estão indo bem, mas preciso
+                    falar com você sobre algo importante. Você pode reservar um tempo para uma conversa?</p>
+                <p class="outren"><strong>Miguel:</strong> Claro, Jorge! Sempre tenho tempo para um amigo de infância.
+                    Do que se trata?</p>
+                <p class="user"><strong>Jorge Carmalho:</strong> Estou envolvido em um projeto secreto com o grupo
+                    Celestes. O Senhor Polox delineou um plano para criar um exército de robôs usando uma tecnologia
+                    chamada Horizon. Precisamos do apoio do Ministério da Tecnologia para realizar a pesquisa na
+                    Amazônia.</p>
+                <p class="outren"><strong>Miguel:</strong> Um exército de robôs? Isso parece coisa de filme! Mas claro,
+                    conte-me mais. Como o Ministério pode ajudar?</p>
+                <p class="user"><strong>Jorge Carmalho:</strong> Precisamos de acesso às áreas de pesquisa na Amazônia.
+                    Um de nossos cientistas, o senhor Pedro, achou uma fonte dessa tecnologia na região. Além disso, o
+                    apoio logístico e regulatório do Ministério seria fundamental para garantir o sucesso da iniciativa.
+                <p class="outren"><strong>Miguel:</strong> Entendi. Isso é ousado, Jorge. Mas você sabe que pode contar
+                    comigo. Vou fazer o possível para facilitar o acesso e fornecer o suporte necessário. Acredito que
+                    esse projeto pode ter um impacto significativo no avanço da tecnologia no país.
+                <p class="user"><strong>Jorge Carmalho:</strong> Agradeço muito, meu amigo! Sei que podemos contar com o
+                    Ministério da Tecnologia. Vou enviar os detalhes do projeto e os requisitos específicos em breve.
+                    Precisamos manter isso em segredo, apenas entre nós e o grupo Celestes.
+                <p class="outren"><strong>Miguel:</strong> Absolutamente, Jorge. Conte com o meu sigilo. Vamos
+                    transformar essa visão em realidade. Estou ansioso para ver o que o projeto Horizon pode alcançar.
+                <p class="user"><strong>Jorge Carmalho:</strong> Ótimo, meu amigo! Vamos revolucionar a tecnologia
+                    juntos. Agradeço pela sua colaboração. Até em breve.
+                <p class="outren"><strong>Miguel:</strong> Até breve, Jorge. Estou ansioso para trabalharmos juntos
+                    nesse projeto empolgante.</p>
+            </div>
+            <div class="conversation person4">
+                <h1>RELATÓRIO CONFIDENCIAL</h1>
+                <br>
+                <p><strong>Para:</strong>Senhor Polox, Líder do Grupo Celestes</p>
+                <p><strong>De:</strong>Jorge Carmalho, CEO da Infinity Technology</p>
+                <p><strong>Assunto:</strong>Situação Atual do Projeto Horizon na Amazônia</p>
+                <p><strong>Data: </strong>12/04/2025</p>
+                <br>
+                <p>Senhor Polox,
+                    <br><br>
+                    Espero que esta mensagem o encontre bem. Gostaria de relatar a situação atual do projeto Horizon
+                    conduzido na sede da Infinity Technology na Amazônia. Infelizmente, os eventos recentes têm sido
+                    surpreendentes e desafiadores.
+                    <br><br>
+                    Todos os cientistas e pesquisadores associados ao projeto desapareceram misteriosamente da sede na
+                    Amazônia. As circunstâncias em torno desse desaparecimento são desconhecidas e estamos conduzindo
+                    uma investigação para entender melhor o que aconteceu.
+                    <br><br>
+                    Apesar desse contratempo, gostaria de informar que a equipe conseguiu produzir uma quantidade
+                    significativa de material durante o período em que estavam operacionais. Isso inclui armas
+                    aprimoradas, bem como experimentos bem-sucedidos que combinam a tecnologia Horizon com animais
+                    locais, resultando em criações únicas e potencialmente úteis para nossos objetivos.
+                    <br><br>
+                    A Dra. Edgar, responsável pelo projeto na Amazônia, antes de seu desaparecimento, deixou um
+                    protótipo detalhado de como implementar a tecnologia Horizon no corpo humano. Este é um
+                    desenvolvimento crucial e, embora sua ausência seja preocupante, estamos comprometidos em seguir as
+                    orientações deixadas por ela.
+                    <br><br>
+                    Estamos intensificando a segurança na área e redobrando os esforços para localizar os cientistas
+                    desaparecidos. Além disso, estaremos implementando medidas adicionais para proteger as informações
+                    sensíveis do projeto.
+                    <br><br>
+                    É imperativo que discutamos as próximas etapas e possíveis cursos de ação para lidar com esta
+                    situação. Recomendo uma reunião urgente para discutir em detalhes os desenvolvimentos recentes.
+                    <br><br>
+                    Agradeço sua atenção a este assunto e permaneço à disposição para qualquer orientação adicional.
+                    <br><br>
+                    Atenciosamente,
+                    <br><br>
+                    Jorge Carmalho
+                    <br><br>
+                    CEO, Infinity Technology</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showConversation(person) {
+            // Oculta todas as conversas
+            var conversations = document.querySelectorAll('.conversation');
+            conversations.forEach(function (conversation) {
+                conversation.classList.remove('active');
+            });
+
+            // Mostra a conversa da pessoa clicada
+            var activeConversation = document.querySelector('.' + person);
+            activeConversation.classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
